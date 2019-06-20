@@ -20,6 +20,9 @@ import org.mockito.stubbing.Answer;
 import org.powermock.core.classloader.annotations.PrepareForTest;
 import org.powermock.modules.junit4.PowerMockRunner;
 
+import com.agiletestware.bumblebee.annotations.BooleanValue;
+import com.agiletestware.bumblebee.annotations.Bumblebee;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -32,7 +35,7 @@ import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.when;
 import static org.powermock.api.mockito.PowerMockito.mockStatic;
 import static org.powermock.api.mockito.PowerMockito.verifyStatic;
-
+@Bumblebee(testlab = "Root\\TestBumblebee", testset = "TestBumblebee", testplan = "Subject\\TestBumblebee")
 public class CustomerServiceTest {
 
     @Spy
